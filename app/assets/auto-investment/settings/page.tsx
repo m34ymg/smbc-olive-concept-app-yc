@@ -368,6 +368,7 @@ export default function InvestmentSettingsPage() {
             </Card>
           </TabsContent>
         </Tabs>
+
       </div>
     </MobileFrame>
   )

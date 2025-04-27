@@ -1,17 +1,6 @@
 import type { ReactNode } from "react"
 import { NavigationBar } from "@/components/layout/navigation-bar"
 
-// スクロールバーを非表示にするためのスタイル
-const scrollbarHideStyles = `
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;             /* Chrome, Safari and Opera */
-  }
-`
-
 interface MobileFrameProps {
   children: ReactNode
   showNavigation?: boolean
@@ -20,9 +9,6 @@ interface MobileFrameProps {
 export function MobileFrame({ children, showNavigation = true }: MobileFrameProps) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      {/* スクロールバー非表示のためのスタイル */}
-      <style>{scrollbarHideStyles}</style>
-
       {/* モバイルデバイスフレーム */}
       <div className="w-full max-w-md aspect-[9/19] bg-white rounded-[40px] overflow-hidden shadow-xl border-8 border-gray-800 relative">
         {/* ステータスバー */}
@@ -35,7 +21,7 @@ export function MobileFrame({ children, showNavigation = true }: MobileFrameProp
         </div>
 
         {/* アプリコンテンツ */}
-        <div className="h-full overflow-y-auto pb-24 scrollbar-hide">{children}</div>
+        <div className="h-full overflow-y-auto pb-24">{children}</div>
 
         {/* ナビゲーションバー */}
         {showNavigation && <NavigationBar />}

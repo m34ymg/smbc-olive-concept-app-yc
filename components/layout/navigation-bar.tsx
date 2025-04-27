@@ -26,7 +26,11 @@ export function NavigationBar() {
     <div className="absolute bottom-0 left-0 right-0 bg-white border-t flex justify-around items-center py-2">
       <Link href="/">
         <div className="flex flex-col items-center">
-          <Home size={24} className={activeTab === "home" ? "text-[#0D7A5F]" : "text-gray-500"} />
+          <div
+            className={`${activeTab === "home" ? "w-12 h-12 rounded-full bg-[#0D7A5F] flex items-center justify-center text-white" : ""}`}
+          >
+            <Home size={24} className={activeTab === "home" ? "text-white" : "text-gray-500"} />
+          </div>
           <span className={`text-xs mt-1 ${activeTab === "home" ? "text-[#0D7A5F] font-bold" : "text-gray-500"}`}>
             ホーム
           </span>
@@ -34,8 +38,8 @@ export function NavigationBar() {
       </Link>
       <Link href="/accounts">
         <div className="flex flex-col items-center">
-          <CreditCard size={24} className={activeTab === "accounts" ? "text-[#0D7A5F]" : "text-gray-500"} />
-          <span className={`text-xs mt-1 ${activeTab === "accounts" ? "text-[#0D7A5F] font-bold" : "text-gray-500"}`}>
+          <CreditCard size={24} className={`mb-1 ${activeTab === "accounts" ? "text-[#0D7A5F]" : "text-gray-500"}`} />
+          <span className={`text-xs ${activeTab === "accounts" ? "text-[#0D7A5F] font-bold" : "text-gray-500"}`}>
             口座一覧
           </span>
         </div>
@@ -50,16 +54,16 @@ export function NavigationBar() {
       </Link>
       <Link href="/assets">
         <div className="flex flex-col items-center">
-          <BarChart3 size={24} className={activeTab === "assets" ? "text-[#0D7A5F]" : "text-gray-500"} />
-          <span className={`text-xs mt-1 ${activeTab === "assets" ? "text-[#0D7A5F] font-bold" : "text-gray-500"}`}>
+          <BarChart3 size={24} className={`mb-1 ${activeTab === "assets" ? "text-[#0D7A5F]" : "text-gray-500"}`} />
+          <span className={`text-xs ${activeTab === "assets" ? "text-[#0D7A5F] font-bold" : "text-gray-500"}`}>
             家計管理
           </span>
         </div>
       </Link>
       <Link href="/menu">
         <div className="flex flex-col items-center">
-          <Menu size={24} className={activeTab === "menu" ? "text-[#0D7A5F]" : "text-gray-500"} />
-          <span className={`text-xs mt-1 ${activeTab === "menu" ? "text-[#0D7A5F] font-bold" : "text-gray-500"}`}>
+          <Menu size={24} className={`mb-1 ${activeTab === "menu" ? "text-[#0D7A5F]" : "text-gray-500"}`} />
+          <span className={`text-xs ${activeTab === "menu" ? "text-[#0D7A5F] font-bold" : "text-gray-500"}`}>
             メニュー
           </span>
         </div>
