@@ -264,7 +264,11 @@ export default function HomePage() {
           <CardContent className="p-0">
             <div className="flex">
               <div className="w-1/3">
-                <img src="/smiling-woman-pink-sweater.png" alt="浪費家夫婦の記事" className="h-full w-full object-cover" />
+                <img
+                  src="/smiling-woman-pink-sweater.png"
+                  alt="浪費家夫婦の記事"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="w-2/3 bg-[#F9FBE7] p-3">
                 <div className="bg-[#0D7A5F] text-white inline-block px-2 py-1 rounded-lg text-xs mb-1">

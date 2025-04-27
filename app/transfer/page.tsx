@@ -43,7 +43,7 @@ export default function TransferPage() {
         <div className="space-y-3">
           {transferOptions.map((option, index) => (
             <Link href={option.link} key={index}>
-              <Card className="hover:bg-gray-50 transition-colors">
+              <Card className="hover:bg-gray-50 transition-colors mb-2">
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
